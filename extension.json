@@ -1,0 +1,23 @@
+{
+	"name": "TopContent",
+	"version": "1.0.0",
+	"author": [
+		"Zoran Dori"
+	],
+	"license-name": "GPL-2.0-or-later",
+	"url": "https://www.mediawiki.org/wiki/Extension:TopContent",
+	"description": "Shows top content",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">=1.35.0"
+	},
+	"AutoloadClasses": {
+		"TopContent": "TopContent.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "TopContent::onParserFirstCallInit",
+		"ArticleViewFooter": "TopContent::onArticleViewFooter",
+		"SiteNoticeAfter": "TopContent::onSiteNoticeAfter"
+	},
+	"manifest_version": 1
+}
